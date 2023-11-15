@@ -11,14 +11,19 @@ html {
     color: #151515;
 }
 
+.container {
+    background-color: rgba(10.5, 31.5, 52.5, 1);
+}
+
 .movie-card {
     margin-top: 0.5rem;
-    height: 800px;
+    height: 600px;
     text-align: center;
 }
 
 .movie-title {
     text-transform: capitalize;
+    color: white;
     transform: translateY(-150px);
     animation: slide-from-top 2s ease-in-out forwards;
 }
@@ -29,6 +34,7 @@ html {
 }
 
 .movie-genres {
+    color: white;
     transform: translateY(-150px);
     animation: slide-from-top 2s ease-in-out forwards;
 }
@@ -43,15 +49,15 @@ html {
     margin-top: 2rem;
     height: 100%;
     border-radius: 5px;
-     /*add animation*/
-     position: relative;
-     bottom: -80rem;
-     animation: slide-from-bottom 2s ease-in-out forwards;
+    /*add animation*/
+    position: relative;
+    bottom: -80rem;
+    animation: slide-from-bottom 2s ease-in-out forwards;
  }
  
- @keyframes slide-from-bottom {
-     80% {bottom: 1.5rem;}
-     100% {bottom: 0;}
+@keyframes slide-from-bottom {
+    80% {bottom: 1.5rem;}
+    100% {bottom: 0;}
 }
 
 .movie-poster-container img {
@@ -86,7 +92,7 @@ html {
 }
 
 .movie-info-quote {
-    color: #151515a4;
+    color: white;
     font-style: italic;
     font-size: 1.2rem;
     margin-top: 1rem;
@@ -102,7 +108,8 @@ html {
 }
 
 .movie-info-overview {
-    color: #151515a4;
+    margin-bottom: 1rem;
+    color: white;
     opacity: 0;
     /*add animation*/
     animation: fade-in 2s ease-in-out forwards;
@@ -117,6 +124,7 @@ html {
     text-transform: capitalize;
     letter-spacing: 0.1rem;
     opacity: 0;
+    color: white;
     /*add animation*/
     animation: fade-in 2s ease-in-out forwards;
     animation-delay: 0.5s;
@@ -137,7 +145,7 @@ html {
 .movie-info-actions ul li {
     display: inline-block;
     margin-right: 1rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-bottom: 2rem;
     height: 50px;
     width: 50px;
@@ -161,9 +169,9 @@ html {
 }
 
 footer {
-    margin-top: 20rem;
+    margin-top: 28rem;
     text-align: center;
-    color: #777;
+    color: white;
 }
 
 footer ul {
@@ -174,7 +182,7 @@ footer ul {
 
 footer ul li {
     display: inline-block;
-    margin-top: 2rem;
+    margin-top: 6rem;
     margin-right: 2rem;
     margin-bottom: 2rem;
     border-radius: 5px;
@@ -189,7 +197,7 @@ footer ul li a {
     font-size: 1.5rem;
     text-transform: uppercase;
     text-decoration: none;
-    color: #777;
+    color: white;
 }
 
 .modal {
@@ -197,7 +205,7 @@ footer ul li a {
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: rgb(70, 62, 62);
+    background-color: rgba(10.5, 31.5, 52.5, 1) ;
     z-index: 2;
     top: 0;
     left: 0;
@@ -205,7 +213,8 @@ footer ul li a {
 }
 
 .modal-content {
-    background-color: blanchedalmond;
+    background-color: rgb(27, 51, 74);
+    color: white;
     margin: 5% auto;
     padding: 5rem;
     width: 600px;
@@ -229,6 +238,66 @@ footer ul li a {
     width: 300px;
 }
 
+.container {
+    width: 75%;
+    text-align: center;
+    margin: 3rem auto;
+}
+
+.carousel {
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    position: relative;
+    bottom: -80rem;
+    animation: move-from-bottom 2s ease-in-out forwards;
+}
+
+@keyframes move-from-bottom {
+    80% {bottom: 1.5rem;}
+    100% {bottom: 0;}
+}
+
+.carousel img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.carousel .carousel__item,
+.carousel .carousel__item--hidden {
+    display: none;
+}
 
 
+.carousel .carousel__item--visible {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.carousel .carousel__actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel .carousel__actions button {
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    border: 0;
+    background-color: rgba(124, 124, 152, 0.473);
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    margin: 0.5rem;
+}
 
